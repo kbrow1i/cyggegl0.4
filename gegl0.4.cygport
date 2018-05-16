@@ -10,35 +10,35 @@ HOMEPAGE="http://www.gegl.org/"
 SRC_URI="http://download.gimp.org/pub/gegl/${VERSION%.*}/gegl-${VERSION}.tar.bz2"
 SRC_DIR="gegl-${VERSION}"
 
-PKG_NAMES="gegl0.3 libgegl0.3_0 libgegl0.3-devel girepository-Gegl0.3 vala-gegl0.3"
-gegl0_3_CATEGORY="Graphics"
-gegl0_3_CONTENTS="usr/bin/*-0.3.exe"
-libgegl0_3_0_SUMMARY="${SUMMARY} (runtime)"
-libgegl0_3_0_REQUIRES="dcraw" # raw-load, rawbayer-load
-libgegl0_3_0_CONTENTS="
-	usr/bin/cyggegl-0.3-0.dll
-	usr/bin/cyggegl-*-0.3.dll
-	usr/lib/gegl-0.3/
+PKG_NAMES="gegl0.4 libgegl0.4_0 libgegl0.4-devel girepository-Gegl0.4 vala-gegl0.4"
+gegl0_4_CATEGORY="Graphics"
+gegl0_4_CONTENTS="usr/bin/*-0.4.exe"
+libgegl0_4_0_SUMMARY="${SUMMARY} (runtime)"
+libgegl0_4_0_REQUIRES="dcraw liblensfun0" # raw-load, rawbayer-load
+libgegl0_4_0_CONTENTS="
+	usr/bin/cyggegl-0.4-0.dll
+	usr/bin/cyggegl-*-0.4.dll
+	usr/lib/gegl-0.4/
 	usr/share/doc/${NAME}
-	usr/share/locale/*/*/gegl-0.3.mo
+	usr/share/locale/*/*/gegl-0.4.mo
 "
-libgegl0_3_devel_SUMMARY="${SUMMARY} (development)"
-libgegl0_3_devel_CONTENTS="
-	usr/include/gegl-0.3/
-	usr/lib/libgegl*-0.3.dll.a
-	usr/lib/pkgconfig/gegl*-0.3.pc
+libgegl0_4_devel_SUMMARY="${SUMMARY} (development)"
+libgegl0_4_devel_CONTENTS="
+	usr/include/gegl-0.4/
+	usr/lib/libgegl*-0.4.dll.a
+	usr/lib/pkgconfig/gegl*-0.4.pc
 "
-girepository_Gegl0_3_SUMMARY="${SUMMARY} (GObject Introspection)"
-girepository_Gegl0_3_CONTENTS="usr/*/gir*/Gegl-0.3.*"
-vala_gegl0_3_SUMMARY="${SUMMARY} (Vala bindings)"
-vala_gegl0_3_CONTENTS="usr/share/vala/vapi/gegl-0.3.*"
+girepository_Gegl0_4_SUMMARY="${SUMMARY} (GObject Introspection)"
+girepository_Gegl0_4_CONTENTS="usr/*/gir*/Gegl-0.4.*"
+vala_gegl0_4_SUMMARY="${SUMMARY} (Vala bindings)"
+vala_gegl0_4_CONTENTS="usr/share/vala/vapi/gegl-0.4.*"
 PKG_IGNORE="usr/share/gtk-doc/html/gegl/"
 
 CYGCONF_ARGS="
-	--program-suffix=-0.3
+	--program-suffix=-0.4
 	--enable-workshop
 	--without-libavformat
 	--without-libv4l
 "
 
-DEPEND="libbabl-devel libjson-glib1.0-devel"
+DEPEND="libbabl-devel libjson-glib1.0-devel libgexiv2-devel girepository-GExiv2_0.10 libraw-devel libvala0.38-devel vala libspiro-devel lua-devel libSDL-devel libIlmImf-devel liblensfun-devel libumfpack-devel libgirepository1.0-devel python-gobject-devel python-gi-devel gobject-introspection"
