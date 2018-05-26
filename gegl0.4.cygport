@@ -1,6 +1,6 @@
 NAME="gegl0.4"
 VERSION=0.4.2
-RELEASE=1
+RELEASE=2
 CATEGORY="Libs"
 SUMMARY="Generic Graphics Library"
 DESCRIPTION="GEGL (Generic Graphics Library) is a graph based image processing
@@ -39,6 +39,30 @@ CYGCONF_ARGS="
 	--enable-workshop
 	--without-libavformat
 	--without-libv4l
+	--without-sdl
 "
 
-DEPEND="libbabl-devel libjson-glib1.0-devel libgexiv2-devel girepository-GExiv2_0.10 libraw-devel libvala0.38-devel vala libspiro-devel lua-devel libSDL-devel libIlmImf-devel liblensfun-devel libumfpack-devel libgirepository1.0-devel python-gobject-devel python-gi-devel gobject-introspection"
+DEPEND="
+	asciidoc
+	enscript
+	girepository-GExiv2_0.10
+	gobject-introspection
+	graphviz
+	libIlmImf-devel
+	libSDL-devel
+	libbabl-devel
+	libgexiv2-devel
+	libgirepository1.0-devel
+	libjasper-devel
+	libjson-glib1.0-devel
+	liblensfun-devel
+	libraw-devel
+	libspiro-devel
+	libumfpack-devel
+	libvala0.38-devel
+	libwebp-devel
+	lua-devel
+	python-gi-devel
+	python-gobject-devel
+	vala
+"
