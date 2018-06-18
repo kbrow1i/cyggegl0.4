@@ -1,6 +1,6 @@
 NAME="gegl0.4"
 VERSION=0.4.2
-RELEASE=2
+RELEASE=3
 CATEGORY="Libs"
 SUMMARY="Generic Graphics Library"
 DESCRIPTION="GEGL (Generic Graphics Library) is a graph based image processing
@@ -39,7 +39,6 @@ CYGCONF_ARGS="
 	--enable-workshop
 	--without-libavformat
 	--without-libv4l
-	--without-sdl
 "
 
 DEPEND="
